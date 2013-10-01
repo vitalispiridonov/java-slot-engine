@@ -29,7 +29,7 @@ public class Game {
         this.user = user;
         this.slot = slot;
         
-        awardHistory = new HashMap<>();
+        awardHistory = new HashMap<LineAward, Integer>();
     }
     
     public void spin() {

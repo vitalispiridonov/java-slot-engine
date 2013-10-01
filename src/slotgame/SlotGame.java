@@ -5,7 +5,6 @@
 package slotgame;
 
 import java.util.Map;
-import org.freedesktop.Hal.Manager;
 import slotgame.config.christmas.ChristmasSlotConfig;
 import slotgame.game.Game;
 import slotgame.game.User;

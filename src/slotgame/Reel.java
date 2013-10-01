@@ -19,12 +19,12 @@ public class Reel {
     private List<Symbol> dropedSymbols;
 
     public Reel() {
-        dropedSymbols = new ArrayList<>();
+        dropedSymbols = new ArrayList<Symbol>();
     }
     
     public void drop(Symbol symbol) {
         if (dropedSymbols == null) {
-            dropedSymbols = new ArrayList<>();
+            dropedSymbols = new ArrayList<Symbol>();
         }
         
         dropedSymbols.add(symbol);
@@ -32,7 +32,7 @@ public class Reel {
     
     public void reset() {
         if (dropedSymbols == null) {
-            dropedSymbols = new ArrayList<>();
+            dropedSymbols = new ArrayList<Symbol>();
         }
         
         dropedSymbols.clear();
@@ -40,7 +40,7 @@ public class Reel {
     
     public boolean isDropped(Symbol symbol) {
         if (dropedSymbols == null) {
-            dropedSymbols = new ArrayList<>();
+            dropedSymbols = new ArrayList<Symbol>();
         }
         
         return dropedSymbols.contains(symbol);

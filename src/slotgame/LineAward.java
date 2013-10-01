@@ -4,7 +4,6 @@
  */
 package slotgame;
 
-import java.util.Objects;
 import slotgame.Symbol;
 
 /**
@@ -50,7 +49,7 @@ public class LineAward {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.symbol);
+        hash = 79 * hash + this.symbol.hashCode();
         hash = 79 * hash + this.lineLenght;
         return hash;
     }
@@ -64,7 +63,7 @@ public class LineAward {
             return false;
         }
         final LineAward other = (LineAward) obj;
-        if (!Objects.equals(this.symbol, other.symbol)) {
+        if (!this.symbol.equals(other.symbol)) {
             return false;
         }
         if (this.lineLenght != other.lineLenght) {

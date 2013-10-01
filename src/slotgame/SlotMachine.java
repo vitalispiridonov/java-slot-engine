@@ -32,7 +32,7 @@ public class SlotMachine {
         this.master = master;
         this.paylinesCount = paylinesCount;
         
-        lines = new ArrayList<>();
+        lines = new ArrayList<Line>();
         rnd = new Random(System.nanoTime());
     }
     
@@ -54,7 +54,7 @@ public class SlotMachine {
     }
     
     private void reset() {
-        lines = new ArrayList<>();
+        lines = new ArrayList<Line>();
         
         for (int reelNumber = 0; reelNumber < master.countReels(); reelNumber++) {
             Reel reel = master.getReel(reelNumber);
@@ -89,9 +89,9 @@ public class SlotMachine {
     
     public List<Payline> findPaylines() {
         win = 0;
-        winningLines = new ArrayList<>();
+        winningLines = new ArrayList<Payline>();
         
-        List<Payline> paylines = new ArrayList<>();
+        List<Payline> paylines = new ArrayList<Payline>();
         
         for (int lineIndex = 1; lineIndex <= paylinesCount; lineIndex++) {
             Payline pl = new Payline();
@@ -119,7 +119,7 @@ public class SlotMachine {
     }
     
     private List<Symbol> paylineSymbols(int lineIndex) {
-        List<Symbol> symbols = new ArrayList<>();
+        List<Symbol> symbols = new ArrayList<Symbol>();
         if (lineIndex == 1) {
             symbols.addAll(lines.get(Line.LINE_MIDDLE).getSymbols());
         }

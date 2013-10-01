@@ -4,9 +4,9 @@
  */
 package slotgame.config;
 
-import slotgame.LineAward;
 import java.util.ArrayList;
 import java.util.List;
+import slotgame.LineAward;
 import slotgame.Payline;
 import slotgame.SpecialSymbolType;
 import slotgame.Symbol;
@@ -45,7 +45,7 @@ public abstract class BasicPaytable implements Paytable {
     
     public void addAward(LineAward award) {
         if (awards == null) {
-            awards = new ArrayList<>();
+            awards = new ArrayList<LineAward>();
         }
         
         awards.add(award);
