@@ -36,6 +36,10 @@ public class SlotMachine {
         rnd = new Random(System.nanoTime());
     }
     
+    public SlotConfig getMasterConfig() {
+    	return master;
+    }
+    
     public void spin() {
         reset();
         
@@ -51,6 +55,15 @@ public class SlotMachine {
         }
         
         findPaylines();
+    }
+    
+    public List<Reel> getReels() {
+    	List<Reel> reels= new ArrayList<Reel>();
+    	for (int reelNumber = 0; reelNumber < master.countReels(); reelNumber++) {
+    		reels.add(master.getReel(reelNumber));
+    	}
+    	
+    	return reels;
     }
     
     private void reset() {
