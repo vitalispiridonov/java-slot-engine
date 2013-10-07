@@ -107,7 +107,7 @@ public class SlotMachine {
         List<Payline> paylines = new ArrayList<Payline>();
         
         for (int lineIndex = 1; lineIndex <= paylinesCount; lineIndex++) {
-            Payline pl = new Payline();
+            Payline pl = new Payline(lineIndex);
             pl.addSymbols(paylineSymbols(lineIndex));
             
             

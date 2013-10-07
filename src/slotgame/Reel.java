@@ -76,4 +76,15 @@ public class Reel {
         return symbols.size();
     }
     
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        
+        for (Symbol s: symbols) {
+            sb.append(s.toString()).append(" ");
+        }
+        
+        return sb.toString().trim();
+    }
+    
 }

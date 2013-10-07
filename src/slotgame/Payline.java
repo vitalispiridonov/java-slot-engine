@@ -10,9 +10,13 @@ package slotgame;
  */
 public class Payline extends Line {
     
+    private int index;
     private LineAward lineAward;
-   
 
+    public Payline(int index) {
+        this.index = index;
+    }
+   
     public Symbol getLineSymbol() {
         for (int ind = 0; ind < getSymbols().size(); ind++) {
             if (super.getSymbols().get(ind).getType() != SpecialSymbolType.SYMBOL_TYPE_SPECIAL_WILD) {
@@ -48,6 +52,14 @@ public class Payline extends Line {
         return lineAward.getAward() > 0;
     }
 
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+    
     public int getWin() {
         return lineAward.getAward();
     }

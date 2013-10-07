@@ -16,7 +16,7 @@ public class PlayLine {
     public static final List<PlayLine> PAYLINES;
 
     static {
-        PAYLINES = new ArrayList<>();
+        PAYLINES = new ArrayList<PlayLine>();
 
         PlayLine playLine1 = new PlayLine();
         playLine1.addPoint(new SymbolPosition(Line.LINE_MIDDLE, 0));
